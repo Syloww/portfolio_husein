@@ -56,9 +56,10 @@ span{
     justify-content: space-evenly;
 }
 .titre{
-    font-size: 80px;
+    font-size: 60px;
     font-family: Candu;
     color: #FFF;
+    margin-bottom: 30px;
 }
 .vignette{
     width: 500px;
@@ -66,7 +67,7 @@ span{
 p{
     font-family: Georgecafebold;
     color: #FFF;
-    font-size: 24px;
+    font-size: 20px;
 }
 .parcour_container{
     display: flex;
@@ -77,26 +78,26 @@ p{
     margin-bottom: 80px;
 }
 .parcour_gauche_titre{
-    font-size: 80px;
+    font-size: 40px;
     text-align: left;
     color: #FFF;
     font-family: Candu;
 }
 .parcour_gauche{
-    font-size: 16px;
+    font-size: 20px;
     text-align: left;
     color: #FFF;
     font-family: Georgecafebold;
 }
 .parcour_droite_titre{
-    font-size: 80px;
+    font-size: 40px;
     text-align: right;
     color: #FFF;
     font-family: Candu;
 }
 .parcour_droite{
-    font-size: 16px;
-    text-align: right;
+    font-size: 20px;
+    text-align: left;
     color: #FFF;
     font-family: Georgecafebold;
 }
