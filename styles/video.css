@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Georgecafebold;
+    src: url(/fonts/Louis\ George\ Cafe\ Bold.ttf);
+}
+@font-face {
+    font-family: Georgecafelight;
+    src: url(/fonts/Louis\ George\ Cafe\ Light.ttf);
+}
+@font-face {
+    font-family: Candu;
+    src: url(/fonts/Candu.ttf);
+}
+
+*{
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: all .2s linear;
+}
+
+body{
+    margin: 0px;
+    background-color: #323232;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 60px;
+    margin-top: 40px;
+    font-family: Candu;
+    color: #FFF;
+}
+
+
+
+/* VISUEL*/
+
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+span{
+    color: #E2AE75;
+}
+.active{
+    text-decoration: underline;
+}
+.lien{
+    color: #FFF;
+    font-family: Georgecafebold;
+    font-size: 15px;
+}
+.galerie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titre2 {
+    font-size: x-large;
+    color: #E2AE75;
+}
+.tout {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texte {
+    width: 550px;
+    margin-right: 30px;
+}
+
+.video1 {
+    height: 500px;
+    width: 500px;
+}
+.video2 {
+    border: solid black;
+    height: 300px;
+    width: 500px;
+}
+.image1 {
+    margin-top: 80px;
+    height: 300px;
+    width: 500px;
+}
+
+/* FOOTER */ 
+
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222222;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.petit_container{
+    display: flex;
+    flex-direction: column;
+}
+.footer_titre{
+    font-family: Georgecafebold;
+    color: #FFF;
+}
+.footer_lien{
+    margin-top: 20px;
+    font-family: Georgecafelight;
+    color: #FFF;
+    transition: 0.4s;
+}
+.footer_lien:hover{
+    color: #E2AE75;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .creation{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 40px 10px 40px;
+        font-family: Georgecafebold;
+        text-align: left;
+        align-items: center;
+        justify-content: none;
+    }
+    .crea_image{
+        width: 250px;
+    }
+}

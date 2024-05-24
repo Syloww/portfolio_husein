@@ -1,0 +1,206 @@
+@font-face {
+    font-family: Georgecafebold;
+    src: url(/fonts/Louis\ George\ Cafe\ Bold.ttf);
+}
+@font-face {
+    font-family: Georgecafelight;
+    src: url(/fonts/Louis\ George\ Cafe\ Light.ttf);
+}
+@font-face {
+    font-family: Candu;
+    src: url(/fonts/Candu.ttf);
+}
+
+body{
+    margin: 0px;
+    background-color: #323232;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+a{
+    text-decoration: none;
+}
+p{
+    max-width: 500px;
+}
+span{
+    color: #E2AE75;
+}
+.pop{
+    background-color: #323232;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99px;
+    position: absolute;
+}
+.pop_text{
+    display: flex;
+    padding: 200px;
+    justify-content: center;
+}
+.lien{
+    color: #FFF;
+    font-family: Georgecafebold;
+    font-size: 15px;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.titre{
+    font-size: 90px;
+    font-family: Candu;
+    color: #FFF;
+}
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+.vignette{
+    width: 500px;
+    border-radius: 70px;
+}
+p{
+    font-family: Georgecafebold;
+    color: #FFF;
+    margin: 0;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.animationimage {
+	min-width: min(40rem, 100%);
+}
+
+.vignette {
+	font-size: 3vw;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+
+/* FOOTER */ 
+
+footer{
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222222;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.montagne{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/image.png);
+    background-size: cover;
+    z-index: 9;
+}
+.petit_container{
+    display: flex;
+    flex-direction: column;
+}
+.footer_titre{
+    font-family: Georgecafebold;
+    color: #FFF;
+}
+.footer_lien{
+    margin-top: 20px;
+    font-family: Georgecafelight;
+    color: #FFF;
+    z-index: 99;
+    transition: 0.4s;
+}
+.footer_lien:hover{
+    color: #E2AE75;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .titre{
+        font-size: 30px;
+        font-family: Candu;
+        color: #FFF;
+    }
+    .container{
+        margin-top: 40px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+    }
+}
